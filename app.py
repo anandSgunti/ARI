@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-openai.api_key = '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'
+openai.api_key = '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'
 
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests for frontend integration

@@ -15,7 +15,13 @@ def chatbot_response_stream(message: str):
             model="gpt-4o-mini",  # Using GPT-4o-mini
             messages=[{"role": "system", "content": "You are a helpful assistant."},
                       {"role": "user", "content": message}],
-            stream=True  # Enable streaming
+            stream=True,  # Enable streaming
+            
+  temperature=1,
+  max_completion_tokens=1048,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
         )
         for chunk in response:
             if chunk.choices:

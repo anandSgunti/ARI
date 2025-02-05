@@ -13,7 +13,7 @@ def chatbot_response_stream(message: str):
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",  # Using GPT-4o-mini
-            messages=[{"role": "system", "content": "You are a helpful assistant."},
+            messages=[{"role": "system", "content": "You are a helpful assistant. Provide concise answers, ensuring that responses do not disrupt the immersive experience of AR application users."},
                       {"role": "user", "content": message}],
             stream=True,  # Enable streaming
             

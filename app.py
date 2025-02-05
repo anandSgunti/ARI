@@ -18,7 +18,7 @@ def chatbot_response_stream(message: str):
             stream=True,  # Enable streaming
             
   temperature=1,
-  max_completion_tokens=1048,
+  max_completion_tokens=256,
   top_p=1,
   frequency_penalty=0,
   presence_penalty=0

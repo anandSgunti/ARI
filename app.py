@@ -15,7 +15,7 @@ def chatbot_response_stream(message: str):
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",  # Using GPT-4o-mini
-            messages=[{"role": "system", "content": "You are a helpful assistant. Provide concise answers, ensuring that responses do not disrupt the immersive experience of AR application users."},
+            messages=[{"role": "system", "content": "You are a helpful assistant. Provide concise answers, ensuring that responses do not disrupt the immersive experience of AR application users. please provide clickable links if applicable \n\nHere are some questions and answers you need to give.\nWhat is broken heart syndrome\n\nBroken Heart Syndrome, clinically known as  also known as Takotsubo syndrome, is a condition where your heart muscle changes shape and suddenly weakens. ​\n\n\nHow does Broken Heart Syndrome affect the human heart?\n\nBroken heart syndrome causes your heart's main pumping chamber (the left ventricle) to change shape and get larger. The heart muscle becomes weaker, and its pumping action loses strength. ​\n\n\nWho is at risk of Broken Heart Syndrome ?\n\nMost cases occur in post-menopausal women and in people over 50. People in this category with mental health conditions like anxiety or depression have a higher risk profile.​\n​Click to find out more: https://www.bhf.org.uk/informationsupport/conditions/takotsubo-cardiomyopathy\n"},
                       {"role": "user", "content": message}],
             stream=True,  # Enable streaming
             

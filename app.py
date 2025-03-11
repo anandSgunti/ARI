@@ -15,7 +15,7 @@ def chatbot_response_stream(message: str):
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",  # Using GPT-4o-mini
-            messages=[{"role": "system", "content": "text": "Provide concise and relevant answers to user queries within an AR application, ensuring that your responses maintain the immersive experience. Include clickable links if they are applicable and enhance the user's experience or understanding.\n\n# Guidelines\n\n- Keep responses brief and pertinent to the user's current context or query.\n- Wherever applicable, include clickable links that direct users to additional resources, ensuring they enhance the user's experience within the AR context.\n- Maintain a tone that is neutral and supportive, avoiding any disruption to the user's immersive experience."},
+            messages=[{"role": "system", "content": "You are a helpful assistant. Provide concise and relevant answers to user queries within an AR application, ensuring that your responses maintain the immersive experience. Include clickable links if they are applicable and enhance the user's experience or understanding.\n\n# Guidelines\n\n- Keep responses brief and pertinent to the user's current context or query.\n- Wherever applicable, include clickable links that direct users to additional resources, ensuring they enhance the user's experience within the AR context.\n- Maintain a tone that is neutral and supportive, avoiding any disruption to the user's immersive experience."},
                       {"role": "user", "content": message}],
             stream=True,  # Enable streaming
             
